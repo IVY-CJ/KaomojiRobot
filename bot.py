@@ -27,14 +27,6 @@ def main():
 
     dispatch = update.dispatcher
 
-    dispatch.add_handler(CommandHandler('start', kaomoji.start))
-
-    dispatch.add_handler(CommandHandler('kelp', kaomoji.help))
-
-    dispatch.add_handler(CommandHandler('kaomoji', kaomoji.kamoji_keyboard))
-
-    dispatch.add_handler(CallbackQueryHandler(kaomoji.query_handling, pass_user_data=True))
-
     dispatch.add_handler(InlineQueryHandler(kaomoji.inlinequery))
 
     # Logging for errors
