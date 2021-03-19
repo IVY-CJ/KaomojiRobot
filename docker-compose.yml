@@ -5,5 +5,7 @@ services:
     build:
       context: .
     environment:
+      BRANCH: 'InlineUpdate'
       BOT_TOKEN: '<API Token>'
       BOT_FILE: 'bot.py'
+    restart: always
